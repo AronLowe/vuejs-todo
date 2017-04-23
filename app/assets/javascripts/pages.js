@@ -4,7 +4,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
     data: {
       tasks: ['mow lawn',
         'clean room',
-        'pay bills']
+        'pay bills'
+      ],
+      newTask: ""
+    },
+    methods: {
+      addTask: function() {
+        // console.log("add that task son....", this.newTask);
+        this.tasks.push(this.newTask);
+      }
     }
   });
 });
