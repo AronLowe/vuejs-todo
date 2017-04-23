@@ -10,10 +10,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
     },
     methods: {
       addTask: function() {
-        // console.log("add that task son....", this.newTask);
+        
         this.tasks.push(this.newTask);
+        this.newTask = "";
       }
     }
   });
 });
+
+// Data is instance variable (called methods n vue)
+// methods house methods
 
