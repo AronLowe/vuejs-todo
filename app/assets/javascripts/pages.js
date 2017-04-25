@@ -10,10 +10,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
     },
     methods: {
       addTask: function() {
-        
-        this.tasks.push(this.newTask);
-        this.newTask = "";
-      }
+        if (this.newTask !== "") {
+          this.tasks.push(this.newTask);
+          this.newTask = "";
+        }
+      },
+      deleteTask: function(inputTask) {
+        var index = this.tasks.indexOf(inputTask);
+        this.tasks.splice(index ,1);
+      },
+      
     }
   });
 });
